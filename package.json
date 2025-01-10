@@ -1,0 +1,29 @@
+{
+  "name": "variables-to-css",
+  "version": "1.0.0",
+  "description": "Quickly export your local Figma variables to CSS custom properties.",
+  "main": "code.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint --ext .ts,.tsx --ignore-pattern node_modules .",
+    "lint:fix": "eslint --ext .ts,.tsx --ignore-pattern node_modules --fix .",
+    "watch": "npm run build -- --watch",
+    "prettier:lint": "prettier .",
+    "prettier:format": "prettier --write .",
+    "lint:js": "eslint ."
+  },
+  "author": "Schalk Neethling <schalkneethling@duck.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@figma/eslint-plugin-figma-plugins": "^0.15.0",
+    "@figma/plugin-typings": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.3.2"
+  }
+}

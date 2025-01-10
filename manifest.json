@@ -1,0 +1,13 @@
+{
+  "name": "variables-to-css",
+  "id": "1376995934522464951",
+  "api": "1.0.0",
+  "ui": "ui.html",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

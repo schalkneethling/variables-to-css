@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export your CSS Custom Properties</title>
+  <style type="text/css">
+    body {
+      background-image: linear-gradient(to right, #F9ECF5, #DFD4EA);
+    }
+
+    .output {
+      height: 20rem;
+      width: 100%;
+    }
+
+    .button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Custom Properties Export</h1>
+  <p>Click "Export variables" to get your CSS variables, then press "Select all" and copy your variables to your
+    clipboard.</p>
+  <textarea class="output" id="variables"></textarea>
+  <button class="button" id="export" type="button">Export variables</button>
+  <button class="button" id="select" type="button">Select all</button>
+
+  <script>
+    const selectButton = document.getElementById("select");
+    const exportButton = document.getElementById("export");
+    const variables = document.getElementById("variables");
+
+    selectButton.addEventListener("click", () => {
+      variables.select();
+      variables.focus();
+    });
+
+    exportButton.addEventListener("click", () => {
+      parent.postMessage({ pluginMessage: 'export' }, '*');
+    });
+
+    window.addEventListener("message", (event) => {
+      variables.textContent = event.data.pluginMessage.join("\n");
+    });
+  </script>
+</body>
+
+</html>
