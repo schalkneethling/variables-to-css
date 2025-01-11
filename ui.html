@@ -7,25 +7,42 @@
   <title>Export your CSS Custom Properties</title>
   <style type="text/css">
     body {
-      background-image: linear-gradient(to right, #F9ECF5, #DFD4EA);
+      background-image: linear-gradient(to right, #1e1e1e, #3b3b3b);
+      color: #edecec;
+      font-family: -apple-system, blinkmacsystemfont,
+        avenir next, avenir, segoe ui, helvetica neue, helvetica, cantarell, ubuntu,
+        roboto, noto, arial, sans-serif;
+      padding: 1rem;
     }
 
     .output {
-      height: 20rem;
-      width: 100%;
+      block-size: 18rem;
+      inline-size: 100%;
     }
 
     .button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
+      background-color: #edecec;
+      margin-block-start: 1rem;
+      margin-inline-end: 0.5rem;
+      padding-block: 0.5rem;
+      padding-inline: 1rem;
+    }
+
+    .visually-hidden:not(:focus, :active) {
+      block-size: 1px;
+      clip-path: inset(50%);
+      inline-size: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
     }
   </style>
 </head>
 
 <body>
-  <h1>Custom Properties Export</h1>
-  <p>Click "Export variables" to get your CSS variables, then press "Select all" and copy your variables to your
+  <p>Click "Export variables", then press "Select all" and copy the custom properties to your
     clipboard.</p>
+  <label for="variables" class="visually-hidden">Copy custom properties after export</label>
   <textarea class="output" id="variables"></textarea>
   <button class="button" id="export" type="button">Export variables</button>
   <button class="button" id="select" type="button">Select all</button>

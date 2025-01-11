@@ -1,10 +1,11 @@
 {
   "name": "variables-to-css",
-  "id": "1376995934522464951",
+  "id": "1460027932302083848",
   "api": "1.0.0",
   "ui": "ui.html",
   "main": "code.js",
   "capabilities": [],
+  "documentAccess": "dynamic-page",
   "enableProposedApi": false,
   "editorType": ["figma"],
   "networkAccess": {

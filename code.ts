@@ -67,4 +67,8 @@ figma.ui.onmessage = async (message) => {
   }
 };
 
-figma.showUI(__html__, { width: 1000, height: 500, title: "Export to CSS" });
+figma.showUI(__html__, {
+  width: 1000,
+  height: 450,
+  title: "Export Local Variables To CSS",
+});
